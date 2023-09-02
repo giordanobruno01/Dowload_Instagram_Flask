@@ -17,6 +17,7 @@ def logInsta():
         followers = user.get_followers()
 
         # instaL.download_profile("flask_test", profile_pic_only=False)
+       
 
         
     
