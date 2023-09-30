@@ -8,20 +8,23 @@ def logInsta():
     
     if(request.method == "POST"):
         usern = request.form.get("username").strip()
-        passw = request.form.get("password").strip()
+        # passw = request.form.get("password").strip()
 
-        instaL.login("flask_test", "giordanobruno01")
+        # instaL.login("flask_test", "giordanobruno01")
 
-        user = instaloader.Profile.from_username(instaL.context, "flask_test")
+        # user = instaloader.Profile.from_username(instaL.context, "flask_test")
 
-        followers = user.get_followers()
-
-        # instaL.download_profile("flask_test", profile_pic_only=False)
-       
-
+        # followers = user.get_followers()
+        # instaL.download_stories("giordanobrun01")
         
+        instaL.download_profile(usern, profile_pic_only=False, download_stories=True)
     
-        return render_template("index.html", name = followers)
+
+
+        # instaL.load_session_from_file("giordanobruno01")
+        # instaL.download_feed_posts(max_count=2)
+       
+        return render_template("index.html", name = "hi")
     else: 
         return render_template("index.html")
 # source auth/bin/activate

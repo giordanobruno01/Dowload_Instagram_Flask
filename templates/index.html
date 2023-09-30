@@ -1,23 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'styles/style.scss') }}">
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+    <title>Download from Instagram</title>
 </head>
-<body>
-    <div>
-        <form  method="post" >
-            <label for="username">Username</label>
-            <input type="text" name="username">
-            <label for="password">Password</label>
-            <input type="password" name="password">
 
-            <input type="submit" value="Click" >
-           
-        </form> 
-        {{name}}
-    </div>
-    
+<body>
+    <header>
+        <section class="navigation">
+            <div class="nav-container">
+                <div class="brand">
+                    <a href="#!">Logo</a>
+                </div>
+                <nav>
+                    <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="#!">Home</a>
+                        </li>
+                        <li>
+                            <a href="#!">About</a>
+                        </li>
+                        <li>
+                            <a href="#!">Services</a>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <a href="#!">Web Design</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Web Development</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Graphic Design</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#!">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#!">Portfolio</a>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <a href="#!">Web Design</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Web Development</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Graphic Design</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#!">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+    </header>
+    <main>
+        <div id="select-box">
+            <!-- <form method="post">
+                <label for="username">Username</label>
+                <input type="text" name="username">
+                <label for="password">Password</label>
+                <input type="password" name="password">
+
+                <input type="submit" value="Click">
+
+            </form> -->
+            
+            <div id="instructions">
+                <h2>Instructions</h2>
+                <p>select user</p>
+                <p>select the item to be downloaded</p>
+                <p>User must have a public account</p>
+            </div>
+            <form action="" method="post">
+                <label for="username">Select the Username</label>
+                <input type="text" name="username" placeholder="username">
+                <select name="" id="">
+                    <option value="profile">Profile Image</option>
+                    <option value="stories">Stories</option>
+                    <option value="reels">Reels</option>
+                    <option value="hashtag">Hashtag Related Images</option>
+                </select>
+                <input type="submit" value="Download">
+
+            </form>
+
+
+            {{name}}
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+
 </body>
+
 </html>
