@@ -1,7 +1,6 @@
 (function ($) {
   // Begin jQuery
   $(function () {
-   
     // DOM ready
     // If a link has a dropdown, add sub menu toggle.
     $("nav ul li a:not(:only-child)").click(function (e) {
@@ -9,7 +8,6 @@
       // Close one dropdown when selecting another
       $(".nav-dropdown").not($(this).siblings()).hide();
       e.stopPropagation();
-      
     });
     // Clicking away from dropdown will remove the dropdown class
     $("html").click(function () {
@@ -26,9 +24,21 @@
   }); // end DOM ready
 })(jQuery); // end jQuery
 
-(function($){
- $("hashtag").click(function () {
-   $("#extra").toggle();  
- });
-}
-)
+// $(function ($) {
+  
+//   $("hash").click(function () {
+//     console.log("hi");
+//     $("#extra").toggle();
+//   });
+// });
+// $(document).ready(function () {
+//   $(".hash").click(function () {
+//     console.log("hi")
+//     $("#extra").toggle();
+//   });
+// });
+$(document).ready(function () {
+  $("p").click(function () {
+    alert("The paragraph was clicked.");
+  });
+});

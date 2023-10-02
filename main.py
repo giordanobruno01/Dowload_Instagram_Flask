@@ -34,7 +34,7 @@ def logInsta():
                 instaL.download_profile(usern, profile_pic_only=False, download_stories=True)
             elif(opt=="reels"):
                 instaL.download_videos()
-                
+                  
             elif(opt=="hashtag"):
                 instaL.download_hashtag()
                 
