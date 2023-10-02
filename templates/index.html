@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename= 'styles/style.scss') }}">
-    <script src="{{url_for('static', filename='script.js')}}"></script>
-    <title>Download from Instagram</title>
-</head> 
 
-<body>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'styles/style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+
+
+    <title>Download from Instagram</title>
+
+</head>
+
+<body class="">
     <header>
         <section class="navigation">
             <div class="nav-container">
@@ -20,42 +25,16 @@
                     <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
                     <ul class="nav-list">
                         <li>
-                            <a href="#!">Home</a>
+                            <a href="#main">Home</a>
                         </li>
                         <li>
-                            <a href="#!">About</a>
+                            <a href="">About</a>
                         </li>
+
                         <li>
-                            <a href="#!">Services</a>
-                            <ul class="nav-dropdown">
-                                <li>
-                                    <a href="#!">Web Design</a>
-                                </li>
-                                <li>
-                                    <a href="#!">Web Development</a>
-                                </li>
-                                <li>
-                                    <a href="#!">Graphic Design</a>
-                                </li>
-                            </ul>
+                            <a href="https://unfollowersinstagram.com/" target="_blank">Unfollowers</a>
                         </li>
-                        <li>
-                            <a href="#!">Pricing</a>
-                        </li>
-                        <li>
-                            <a href="#!">Portfolio</a>
-                            <ul class="nav-dropdown">
-                                <li>
-                                    <a href="#!">Web Design</a>
-                                </li>
-                                <li>
-                                    <a href="#!">Web Development</a>
-                                </li>
-                                <li>
-                                    <a href="#!">Graphic Design</a>
-                                </li>
-                            </ul>
-                        </li>
+
                         <li>
                             <a href="#!">Contact</a>
                         </li>
@@ -65,7 +44,7 @@
         </section>
 
     </header>
-    <main>
+    <main class="nav-container">
         <div id="select-box">
             <!-- <form method="post">
                 <label for="username">Username</label>
@@ -76,7 +55,7 @@
                 <input type="submit" value="Click">
 
             </form> -->
-            
+
             <div id="instructions">
                 <h2>Instructions</h2>
                 <p>select user</p>
@@ -86,14 +65,20 @@
             <form action="" method="post">
                 <label for="username">Select the Username</label>
                 <input type="text" name="username" placeholder="username">
-                <input type="password" name="password" placeholder="password">
+                <input type="text" id="extra" style="display: none;">
+                
+                <!-- <input type="password" name="password" placeholder="password"> -->
                 <select name="opt" id="">
                     <option value="profile">Profile Image</option>
                     <option value="stories">Stories</option>
                     <option value="reels">Reels</option>
                     <option value="hashtag">Hashtag Related Images</option>
+                    <option value="highlights">highlights</option>
+                    <option value="post">post</option>
+                    <option value="pictures">pictures</option>
+                    <option value="igtv">igtv</option>
                 </select>
-                <input type="submit" value="Download">
+                <input type="submit" value="Download" onclick="hu()">
 
             </form>
 
@@ -105,7 +90,7 @@
 
     </footer>
 
-
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
 </body>
 
 </html>
