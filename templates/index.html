@@ -7,6 +7,13 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename= 'styles/style.css') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script> -->
 
 
 
@@ -61,23 +68,25 @@
                 <p>select user</p>
                 <p>select the item to be downloaded</p>
                 <p>User must have a public account</p>
-            </div> 
-            <form action="" method="post">
+            </div>
+            <form action="" method="post" class="row">
                 <label for="username">Select the Username</label>
-                <input type="text" name="username" placeholder="username">
-                <input type="text" id="extra" >
-                
+                <input type="text" name="username" placeholder="username" class="col-xs-12">
+
                 <!-- <input type="password" name="password" placeholder="password"> -->
-                <select name="opt" id="">
+                <select name="opt" id="hash" class="col-xm-12">
                     <option value="profile">Profile Image</option>
                     <option value="stories">Stories</option>
                     <option value="reels">Reels</option>
-                    <option value="hashtag" class="hash">Hashtag Related Images</option>
+                    <option value="hashtag">Hashtag Related Images</option>
                     <option value="highlights">highlights</option>
                     <option value="post">post</option>
                     <option value="pictures">pictures</option>
                     <option value="igtv">igtv</option>
                 </select>
+                <input type="text" id="extra" name="extra" placeholder="hashtag" class="col-xs-12">
+
+                <input type="text" id="amount" name="amount" placeholder="how many post?" class="col-xs-12">
                 <input type="submit" value="Download" onclick="hu()">
 
             </form>

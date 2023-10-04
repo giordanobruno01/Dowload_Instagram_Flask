@@ -18,6 +18,8 @@ def logInsta():
     if(request.method == "POST"):
         try:
             usern = request.form.get("username").strip()
+            hashtag = request.form.get("extra")
+            amount = request.form.get("amount")
             # passw = request.form.get("password").strip()
         except:
             
@@ -36,7 +38,8 @@ def logInsta():
                 instaL.download_videos()
                   
             elif(opt=="hashtag"):
-                instaL.download_hashtag()
+                
+                instaL.download_hashtag(hashtag, max_count=amount)
                 
             elif(opt=="highlights"):
                 instaL.download_highlights()
@@ -71,7 +74,7 @@ def logInsta():
 # source auth/bin/activate
 # export FLASK_APP=Unfollower_Instagram_Flask
 # FLASK_APP="main.py"
-# export FLASK_DEBUG=1
+# export FLASK_DEBUG=1 
  
 
  

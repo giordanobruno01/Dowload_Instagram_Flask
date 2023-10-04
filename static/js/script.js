@@ -31,14 +31,19 @@
 //     $("#extra").toggle();
 //   });
 // });
-// $(document).ready(function () {
-//   $(".hash").click(function () {
-//     console.log("hi")
-//     $("#extra").toggle();
-//   });
-// });
 $(document).ready(function () {
-  $("p").click(function () {
-    alert("The paragraph was clicked.");
+  $("#hash").change(function () {
+    if($(this).val()=="hashtag"){
+      $("#extra").show();
+      $("#amount").show();
+    }else{
+      $("#extra").hide();
+      $("#amount").hide();
+    }
   });
 });
+// $(document).ready(function () {
+//   $("option").click(function () {
+//     alert("The paragraph was clicked.");
+//   });
+// });
