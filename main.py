@@ -18,8 +18,9 @@ def logInsta():
     if(request.method == "POST"):
         try:
             usern = request.form.get("username").strip()
-            hashtag = request.form.get("extra")
-            amount = request.form.get("amount")
+            if(request.form.get("opt").strip()=="hashtag"):
+                hashtag = request.form.get("extra")
+                amount = int(request.form.get("amount"))
             # passw = request.form.get("password").strip()
         except:
             
@@ -34,24 +35,33 @@ def logInsta():
                 instaL.download_storyitem()
             elif(opt =="profile"):
                 instaL.download_profile(usern, profile_pic_only=False, download_stories=True)
+                shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
             elif(opt=="reels"):
+
                 instaL.download_videos()
+                shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
                   
             elif(opt=="hashtag"):
                 
                 instaL.download_hashtag(hashtag, max_count=amount)
+                shutil.make_archive(base_name=hashtag, format="zip", root_dir=str("#"+hashtag))
+                return send_file(str(hashtag+".zip"),as_attachment=True)
                 
             elif(opt=="highlights"):
                 instaL.download_highlights()
+                shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
                 
             elif(opt=="post"):
                 instaL.download_post()
+                shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
                 
             elif(opt=="pictures"):
-                instaL.download_pictures
+                instaL.download_pictures()
+                shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
                 
             elif(opt=="igtv"):
                 instaL.download_igtv()
+                shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
                 
         except:
             try:
