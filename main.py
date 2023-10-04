@@ -42,10 +42,18 @@ def logInsta():
                 shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
                   
             elif(opt=="hashtag"):
-                
+                try:
+                    deletezip()
+                except:
+                    pass
                 instaL.download_hashtag(hashtag, max_count=amount)
                 shutil.make_archive(base_name=hashtag, format="zip", root_dir=str("#"+hashtag))
+                try:
+                    shutil.rmtree(str("#"+hashtag))
+                except:
+                    pass
                 return send_file(str(hashtag+".zip"),as_attachment=True)
+                
                 
             elif(opt=="highlights"):
                 instaL.download_highlights()
