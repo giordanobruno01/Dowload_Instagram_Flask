@@ -1,5 +1,6 @@
 from flask import Flask, request, url_for, redirect, render_template, send_file, flash 
 import instaloader, shutil, os
+from instaloader import *
 app = Flask(__name__)   
 app.secret_key = "hellome"  
   
@@ -29,12 +30,16 @@ def logInsta():
         opt = request.form.get("opt")
         deletezip()
         try:
+            shutil.rmtree(usern)  
+        except:
+            pass
+        try:
             if(opt =="stories"):
                 # instaL.login(user = usern, passwd=passw)
                 # instaL.download_stories(userids = [instaL.check_profile_id(usern)])
                 instaL.download_storyitem()
             elif(opt =="profile"):
-                instaL.download_profile(usern, profile_pic_only=False, download_stories=True)
+                instaL.download_profile(usern, profile_pic_only=True, download_stories=True)
                 shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
             elif(opt=="reels"):
 
@@ -42,10 +47,7 @@ def logInsta():
                 shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
                   
             elif(opt=="hashtag"):
-                try:
-                    deletezip()
-                except:
-                    pass
+                
                 instaL.download_hashtag(hashtag, max_count=amount)
                 shutil.make_archive(base_name=hashtag, format="zip", root_dir=str("#"+hashtag))
                 try:
@@ -60,29 +62,36 @@ def logInsta():
                 shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
                 
             elif(opt=="post"):
-                instaL.download_post()
-                shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
+               
+                prof = Profile.from_username(instaL.context, usern)
+                
+                post = prof.get_posts()
+                for i in post:
+                    instaL.download_post(i,target=usern)
+                
+                return send_file(shutil.make_archive(base_name=usern, format="zip", root_dir=usern),as_attachment=True)
+                # instaL.download_post(target="https://www.instagram.com/p/Cwr2kd0tl2q/?utm_source=ig_web_button_share_sheet")
                 
             elif(opt=="pictures"):
+
                 instaL.download_pictures()
                 shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
                 
             elif(opt=="igtv"):
+
                 instaL.download_igtv()
+                shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
+
+            elif(opt=="test"):
+
+                instaL.download_profile(usern, download_stories_only=True)
                 shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
                 
         except:
-            try:
-                shutil.rmtree(usern)
-            except:
-                pass
+            
             return render_template("index.html", name = str(usern + " is a private account"))
         shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
-        try:
-            shutil.rmtree(usern)
-        except:
-            pass
-
+    
         # instaL.download_feed_posts(max_count=2)
 
         return send_file(str(usern+".zip"),as_attachment=True)
