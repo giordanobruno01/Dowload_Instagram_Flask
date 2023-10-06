@@ -64,14 +64,15 @@ def logInsta():
             elif(opt=="post"):
                
                 prof = Profile.from_username(instaL.context, usern)
-                
+
                 post = prof.get_posts()
+                
                 for i in post:
                     instaL.download_post(i,target=usern)
                 
                 return send_file(shutil.make_archive(base_name=usern, format="zip", root_dir=usern),as_attachment=True)
                 # instaL.download_post(target="https://www.instagram.com/p/Cwr2kd0tl2q/?utm_source=ig_web_button_share_sheet")
-                
+                 
             elif(opt=="pictures"):
 
                 instaL.download_pictures()
@@ -84,7 +85,7 @@ def logInsta():
 
             elif(opt=="test"):
 
-                instaL.download_profile(usern, download_stories_only=True)
+                instaL.download_profile(usern, post_filter="https://www.instagram.com/p/Cwr2kd0tl2q/?utm_source=ig_web_button_share_sheet", download_stories_only=True)
                 shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
                 
         except:

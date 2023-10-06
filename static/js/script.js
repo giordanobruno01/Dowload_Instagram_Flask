@@ -33,10 +33,10 @@
 // });
 $(document).ready(function () {
   $("#hash").change(function () {
-    if($(this).val()=="hashtag"){
+    if ($(this).val() == "hashtag") {
       $("#extra").show();
       $("#amount").show();
-    }else{
+    } else {
       $("#extra").hide();
       $("#amount").hide();
     }
