@@ -32,7 +32,7 @@
 //   });
 // });
 $(document).ready(function () {
-  $("#hash").change(function () {
+  $("#hash").change(function () { 
     if ($(this).val() == "hashtag") {
       $("#extra").show();
       $("#amount").show();

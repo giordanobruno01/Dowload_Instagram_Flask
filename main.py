@@ -68,7 +68,7 @@ def logInsta():
                 post = prof.get_posts()
                 
                 for i in post:
-                    instaL.download_post(i,target=usern)
+                    instaL.download_post(i,target=usern) 
                 
                 return send_file(shutil.make_archive(base_name=usern, format="zip", root_dir=usern),as_attachment=True)
                 # instaL.download_post(target="https://www.instagram.com/p/Cwr2kd0tl2q/?utm_source=ig_web_button_share_sheet")
