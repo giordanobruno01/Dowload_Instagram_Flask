@@ -64,7 +64,7 @@ def logInsta():
             elif(opt=="post"):
                
                 prof = Profile.from_username(instaL.context, usern)
-
+ 
                 post = prof.get_posts()
                 
                 for i in post:

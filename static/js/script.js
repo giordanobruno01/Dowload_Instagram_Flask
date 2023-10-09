@@ -23,7 +23,7 @@
     });
   }); // end DOM ready
 })(jQuery); // end jQuery
-
+ 
 // $(function ($) {
   
 //   $("hash").click(function () {
