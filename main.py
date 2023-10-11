@@ -1,5 +1,7 @@
 from flask import Flask, request, url_for, redirect, render_template, send_file, flash 
 import instaloader, shutil, os
+import datetime
+
 from instaloader import *
 app = Flask(__name__)   
 app.secret_key = "hellome"  
@@ -45,7 +47,7 @@ def logInsta():
 
                 instaL.download_videos()
                 shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
-                  
+                    
             elif(opt=="hashtag"):
                 
                 instaL.download_hashtag(hashtag, max_count=amount)
@@ -62,9 +64,9 @@ def logInsta():
                 shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
                 
             elif(opt=="post"):
-               
+                
                 prof = Profile.from_username(instaL.context, usern)
- 
+
                 post = prof.get_posts()
                 
                 for i in post:
@@ -72,7 +74,7 @@ def logInsta():
                 
                 return send_file(shutil.make_archive(base_name=usern, format="zip", root_dir=usern),as_attachment=True)
                 # instaL.download_post(target="https://www.instagram.com/p/Cwr2kd0tl2q/?utm_source=ig_web_button_share_sheet")
-                 
+                    
             elif(opt=="pictures"):
 
                 instaL.download_pictures()
@@ -84,9 +86,12 @@ def logInsta():
                 shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
 
             elif(opt=="test"):
+                startdate = request.form.get("startdate").split("-")
+                enddate = request.form.get("startdate").split("-")
+                f = startdate.split()[0]
+                instaL.download_profile(usern, post_filter = lambda post: (post.date_utc >= datetime.datetime(int(startdate[0]), int(startdate[1]), int(startdate[2])) and post.date_utc <= datetime.datetime(int(enddate[0]), int(enddate[1]), int(enddate[2]))))
+                # shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
 
-                instaL.download_profile(usern, post_filter="https://www.instagram.com/p/Cwr2kd0tl2q/?utm_source=ig_web_button_share_sheet", download_stories_only=True)
-                shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
                 
         except:
             
