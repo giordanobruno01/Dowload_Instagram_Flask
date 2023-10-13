@@ -89,7 +89,7 @@ def logInsta():
                 startdate = request.form.get("startdate").split("-")
                 enddate = request.form.get("startdate").split("-")
                 f = startdate.split()[0]
-                instaL.download_profile(usern, post_filter = lambda post: (post.date_utc >= datetime.datetime(int(startdate[0]), int(startdate[1]), int(startdate[2])) and post.date_utc <= datetime.datetime(int(enddate[0]), int(enddate[1]), int(enddate[2]))))
+                instaL.download_profile(usern, post_filter = lambda post: (post.date_utc >= datetime.datetime(int(startdate[0]), int(startdate[1]), int(startdate[2])) and post.date_utc <= datetime.datetime(int(enddate[0]), int(enddate[1]), int(enddate[2])))) 
                 # shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
 
                 
