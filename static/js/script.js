@@ -33,7 +33,17 @@
 // });
 $(document).ready(function () {
   $("#hash").change(function () {
-    if ($(this).val() == "hashtag") {
+    if ($(this).val() == "blank") {
+      $("#hashtag").hide();
+      $("#profile").hide();
+      $("#stories").hide();
+      $("#reels").hide();
+      $("#highlights").hide();
+      $("#post").hide();
+      $("#pictures").hide();
+      $("#igtv ").hide();
+      $("#test").hide();
+    } else if ($(this).val() == "hashtag") {
       $("#hashtag").show();
       $("#profile").hide();
       $("#stories").hide();

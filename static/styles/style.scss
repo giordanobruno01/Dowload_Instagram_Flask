@@ -195,61 +195,78 @@ article {
 }
 main {
   #select-box {
+    display: block;
+    margin: auto;
     #instructions {
       background-color: #2581dc;
     }
     .formblock {
-      background-color: aqua;
+      margin: auto;
+      #blank {
+        display: none;
+
+        width: 500px;
+        height: 500px;
+      }
       #profile {
+        margin: auto;
         display: none;
         background-color: pink;
         width: 500px;
         height: 500px;
       }
       #stories {
-         display: none;
+        margin: auto;
+        display: none;
         background-color: gold;
         width: 500px;
         height: 500px;
       }
       #reels {
-         display: none;
+        margin: auto;
+        display: none;
         background-color: greenyellow;
         width: 500px;
         height: 500px;
       }
       #hashtag {
-         display: none;
+        margin: auto;
+        display: none;
         background-color: burlywood;
         width: 500px;
         height: 500px;
       }
       #highlights {
-         display: none;
+        margin: auto;
+        display: none;
         background-color: red;
         width: 500px;
         height: 500px;
       }
       #post {
-         display: none;
+        margin: auto;
+        display: none;
         background-color: bisque;
         width: 500px;
         height: 500px;
       }
       #pictures {
-         display: none;
+        margin: auto;
+        display: none;
         background-color: aquamarine;
         width: 500px;
         height: 500px;
       }
       #igtv {
-         display: none;
+        margin: auto;
+        display: none;
         background-color: grey;
         width: 500px;
         height: 500px;
       }
       #test {
-         display: none;
+        margin: auto;
+        display: none;
         background-color: azure;
         width: 500px;
         height: 500px;
