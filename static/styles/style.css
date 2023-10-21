@@ -84,8 +84,8 @@ nav ul li ul li a {
   .nav-mobile {
     display: block;
     position: absolute;
-    top: 8px;
-    right: 10px;
+    top: 0px;
+    right: 0px;
     background: #262626;
     height: 70px;
     width: 70px;
@@ -155,6 +155,7 @@ main #select-box #instructions h2 {
 main #select-box .formblock {
   margin: auto;
   text-align: center;
+  display: block;
 }
 main #select-box .formblock #hash {
   margin-bottom: 30px;
@@ -169,6 +170,13 @@ main #select-box .formblock div {
 }
 main #select-box .formblock #blank {
   background-color: #ffffff;
+  padding-top: 50px;
+  margin: auto;
+  display: block;
+  max-width: 30vw;
+  min-width: 250px;
+  min-height: 30vh;
+  border: 1px solid black;
 }
 main #select-box .formblock #profile {
   background-color: pink;
@@ -198,13 +206,20 @@ main #select-box .formblock #test {
   background-color: azure;
 }
 
-.footer-basic {
-  padding: 40px 0;
+footer {
+  background-color: #2581dc;
+  display: flex;
+  align-items: end;
+}
+footer .footer-basic {
+  padding: 10px 0;
   background-color: #ffffff;
   color: #4b4c4d;
 }
-
-.footer-basic ul {
+footer .footer-basic {
+  padding: 18px 0;
+}
+footer .footer-basic ul {
   padding: 0;
   list-style: none;
   text-align: center;
@@ -212,27 +227,23 @@ main #select-box .formblock #test {
   line-height: 1.6;
   margin-bottom: 0;
 }
-
-.footer-basic li {
+footer .footer-basic li {
   padding: 0 10px;
 }
-
-.footer-basic ul a {
+footer .footer-basic ul a {
   color: inherit;
   text-decoration: none;
   opacity: 0.8;
 }
-
-.footer-basic ul a:hover {
+footer .footer-basic ul a:hover {
   opacity: 1;
 }
-
-.footer-basic .social {
+footer .footer-basic .social {
   text-align: center;
+  padding-top: 10px;
   padding-bottom: 25px;
 }
-
-.footer-basic .social > a {
+footer .footer-basic .social > a {
   font-size: 24px;
   width: 40px;
   height: 40px;
@@ -245,12 +256,10 @@ main #select-box .formblock #test {
   color: inherit;
   opacity: 0.75;
 }
-
-.footer-basic .social > a:hover {
+footer .footer-basic .social > a:hover {
   opacity: 0.9;
 }
-
-.footer-basic .copyright {
+footer .footer-basic .copyright {
   margin-top: 15px;
   text-align: center;
   font-size: 13px;

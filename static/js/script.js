@@ -34,6 +34,7 @@
 $(document).ready(function () {
   $("#hash").change(function () {
     if ($(this).val() == "blank") {
+      $("#blank").show();
       $("#hashtag").hide();
       $("#profile").hide();
       $("#stories").hide();
@@ -45,6 +46,7 @@ $(document).ready(function () {
       $("#test").hide();
     } else if ($(this).val() == "hashtag") {
       $("#hashtag").show();
+      $("#blank").hide();
       $("#profile").hide();
       $("#stories").hide();
       $("#reels").hide();
@@ -55,6 +57,7 @@ $(document).ready(function () {
       $("#test").hide();
     } else if ($(this).val() == "profile") {
       $("#profile").show();
+      $("#blank").hide();
       $("#stories").hide();
       $("#reels").hide();
       $("#hashtag").hide();
@@ -65,6 +68,7 @@ $(document).ready(function () {
       $("#test").hide();
     } else if ($(this).val() == "stories") {
       $("#stories").show();
+      $("#blank").hide();
       $("#profile").hide();
       $("#reels").hide();
       $("#hashtag").hide();
@@ -75,6 +79,7 @@ $(document).ready(function () {
       $("#test").hide();
     } else if ($(this).val() == "reels") {
       $("#reels").show();
+      $("#blank").hide();
       $("#stories").hide();
       $("#profile").hide();
       $("#hashtag").hide();
@@ -85,6 +90,7 @@ $(document).ready(function () {
       $("#test").hide();
     } else if ($(this).val() == "highlights") {
       $("#highlights").show();
+      $("#blank").hide();
       $("#stories").hide();
       $("#reels").hide();
       $("#hashtag").hide();
@@ -95,6 +101,7 @@ $(document).ready(function () {
       $("#test").hide();
     } else if ($(this).val() == "post") {
       $("#post").show();
+      $("#blank").hide();
       $("#stories").hide();
       $("#reels").hide();
       $("#hashtag").hide();
@@ -105,6 +112,7 @@ $(document).ready(function () {
       $("#test").hide();
     } else if ($(this).val() == "pictures") {
       $("#pictures").show();
+      $("#blank").hide();
       $("#stories").hide();
       $("#reels").hide();
       $("#hashtag").hide();
@@ -115,6 +123,7 @@ $(document).ready(function () {
       $("#test").hide();
     } else if ($(this).val() == "igtv") {
       $("#igtv").show();
+      $("#blank").hide();
       $("#stories").hide();
       $("#reels").hide();
       $("#hashtag").hide();
@@ -125,6 +134,7 @@ $(document).ready(function () {
       $("#test").hide();
     } else if ($(this).val() == "test") {
       $("#test").show();
+      $("#blank").hide();
       $("#stories").hide();
       $("#reels").hide();
       $("#profile").hide();
