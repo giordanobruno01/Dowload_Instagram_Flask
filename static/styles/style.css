@@ -1,35 +1,44 @@
 @charset "UTF-8";
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* Medium devices (landscape tablets, 768px and up) */
-/* Large devices (laptops/desktops, 992px and up) */
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/* Outer navigation wrapper */
-.navigation {
-  height: 70px;
-  background: #262626;
-}
-
-.brand {
-  position: absolute;
-  padding-left: 20px;
-  float: left;
-  line-height: 70px;
-  text-transform: uppercase;
-  font-size: 1.4em;
-}
-.brand a,
-.brand a:visited {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.nav-container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
 nav {
   float: right;
+}
+nav #nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+nav #nav-toggle span,
+nav #nav-toggle span:before,
+nav #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+nav #nav-toggle span:before {
+  top: -10px;
+}
+nav #nav-toggle span:after {
+  bottom: -10px;
+}
+nav #nav-toggle.active span {
+  background-color: transparent;
+}
+nav #nav-toggle.active span:before, nav #nav-toggle.active span:after {
+  top: 0;
+}
+nav #nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+nav #nav-toggle.active span:after {
+  transform: rotate(-45deg);
 }
 nav ul {
   list-style: none;
@@ -67,27 +76,19 @@ nav ul li ul li a {
   line-height: 20px;
 }
 
-.nav-dropdown {
-  position: absolute;
-  display: none;
-  z-index: 1;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Mobile navigation */
 .nav-mobile {
   display: none;
-  position: absolute;
-  top: 8px;
-  right: 10px;
-  background: #262626;
-  height: 70px;
-  width: 70px;
 }
 
 @media only screen and (max-width: 798px) {
   .nav-mobile {
     display: block;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: #262626;
+    height: 70px;
+    width: 70px;
   }
   nav {
     width: 100%;
@@ -115,57 +116,28 @@ nav ul li ul li a {
     display: block !important;
   }
 }
-#nav-toggle {
-  position: absolute;
-  left: 18px;
-  top: 22px;
-  cursor: pointer;
-  padding: 10px 35px 16px 0px;
-}
-#nav-toggle span,
-#nav-toggle span:before,
-#nav-toggle span:after {
-  cursor: pointer;
-  border-radius: 1px;
-  height: 5px;
-  width: 35px;
-  background: #ffffff;
-  position: absolute;
-  display: block;
-  content: "";
-  transition: all 300ms ease-in-out;
-}
-#nav-toggle span:before {
-  top: -10px;
-}
-#nav-toggle span:after {
-  bottom: -10px;
-}
-#nav-toggle.active span {
-  background-color: transparent;
-}
-#nav-toggle.active span:before, #nav-toggle.active span:after {
-  top: 0;
-}
-#nav-toggle.active span:before {
-  transform: rotate(45deg);
-}
-#nav-toggle.active span:after {
-  transform: rotate(-45deg);
+/* Outer navigation wrapper */
+.navigation {
+  height: 70px;
+  background: #262626;
 }
 
-article {
+.nav-container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 10px;
 }
-
-#extra {
-  display: none;
+.nav-container .brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
 }
-
-#amount {
-  display: none;
+.nav-container .brand a,
+.nav-container .brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 main #select-box {
@@ -173,76 +145,115 @@ main #select-box {
   margin: auto;
 }
 main #select-box #instructions {
-  background-color: #2581dc;
+  background-color: hsla(210, 85%, 78%, 0.455);
+  margin-top: 20px;
+  padding: 10px;
+}
+main #select-box #instructions h2 {
+  text-align: center;
 }
 main #select-box .formblock {
   margin: auto;
+  text-align: center;
+}
+main #select-box .formblock #hash {
+  margin-bottom: 30px;
+}
+main #select-box .formblock div {
+  padding-top: 50px;
+  margin: auto;
+  display: none;
+  max-width: 30vw;
+  min-width: 250px;
+  min-height: 30vh;
 }
 main #select-box .formblock #blank {
-  display: none;
-  width: 500px;
-  height: 500px;
+  background-color: #ffffff;
 }
 main #select-box .formblock #profile {
-  margin: auto;
-  display: none;
   background-color: pink;
-  width: 500px;
-  height: 500px;
 }
 main #select-box .formblock #stories {
-  margin: auto;
-  display: none;
   background-color: gold;
-  width: 500px;
-  height: 500px;
 }
 main #select-box .formblock #reels {
-  margin: auto;
-  display: none;
   background-color: greenyellow;
-  width: 500px;
-  height: 500px;
 }
 main #select-box .formblock #hashtag {
-  margin: auto;
-  display: none;
   background-color: burlywood;
-  width: 500px;
-  height: 500px;
 }
 main #select-box .formblock #highlights {
-  margin: auto;
-  display: none;
   background-color: red;
-  width: 500px;
-  height: 500px;
 }
 main #select-box .formblock #post {
-  margin: auto;
-  display: none;
   background-color: bisque;
-  width: 500px;
-  height: 500px;
 }
 main #select-box .formblock #pictures {
-  margin: auto;
-  display: none;
   background-color: aquamarine;
-  width: 500px;
-  height: 500px;
 }
 main #select-box .formblock #igtv {
-  margin: auto;
-  display: none;
   background-color: grey;
-  width: 500px;
-  height: 500px;
 }
 main #select-box .formblock #test {
-  margin: auto;
-  display: none;
   background-color: azure;
-  width: 500px;
-  height: 500px;
+}
+
+.footer-basic {
+  padding: 40px 0;
+  background-color: #ffffff;
+  color: #4b4c4d;
+}
+
+.footer-basic ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer-basic li {
+  padding: 0 10px;
+}
+
+.footer-basic ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity: 1;
+}
+
+.footer-basic .social {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.footer-basic .social > a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity: 0.9;
+}
+
+.footer-basic .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
 }/*# sourceMappingURL=style.css.map */
