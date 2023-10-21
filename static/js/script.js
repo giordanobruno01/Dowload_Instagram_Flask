@@ -121,7 +121,7 @@ $(document).ready(function () {
       $("#highlights").hide();
       $("#post").hide();
       $("#pictures").hide();
-      $("#profile").hide();
+      $("#profile").hide(); 
       $("#test").hide();
     } else if ($(this).val() == "test") {
       $("#test").show();
