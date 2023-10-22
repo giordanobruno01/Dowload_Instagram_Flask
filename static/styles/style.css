@@ -153,6 +153,7 @@ main #select-box #instructions h2 {
   text-align: center;
 }
 main #select-box .formblock {
+  padding-top: 20px;
   margin: auto;
   text-align: center;
   display: block;
@@ -207,17 +208,13 @@ main #select-box .formblock #test {
 }
 
 footer {
-  background-color: #2581dc;
+  margin-top: 30px;
   display: flex;
   align-items: end;
 }
 footer .footer-basic {
-  padding: 10px 0;
-  background-color: #ffffff;
+  background-color: black;
   color: #4b4c4d;
-}
-footer .footer-basic {
-  padding: 18px 0;
 }
 footer .footer-basic ul {
   padding: 0;
@@ -226,9 +223,6 @@ footer .footer-basic ul {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 0;
-}
-footer .footer-basic li {
-  padding: 0 10px;
 }
 footer .footer-basic ul a {
   color: inherit;
@@ -240,8 +234,6 @@ footer .footer-basic ul a:hover {
 }
 footer .footer-basic .social {
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 25px;
 }
 footer .footer-basic .social > a {
   font-size: 24px;
@@ -251,18 +243,16 @@ footer .footer-basic .social > a {
   display: inline-block;
   text-align: center;
   border-radius: 50%;
-  border: 1px solid #ccc;
-  margin: 0 8px;
-  color: inherit;
-  opacity: 0.75;
+  border: 1px solid white;
+  margin: 10px 8px;
+  color: white;
 }
 footer .footer-basic .social > a:hover {
   opacity: 0.9;
 }
 footer .footer-basic .copyright {
-  margin-top: 15px;
+  padding-bottom: 10px;
   text-align: center;
   font-size: 13px;
-  color: #aaa;
-  margin-bottom: 0;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
