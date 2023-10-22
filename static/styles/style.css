@@ -169,6 +169,18 @@ main #select-box .formblock div {
   min-width: 250px;
   min-height: 30vh;
 }
+main #select-box .formblock div label {
+  display: inline-block;
+  margin: auto;
+}
+main #select-box .formblock div input {
+  display: inline-block;
+  margin: auto;
+}
+main #select-box .formblock div .submit {
+  margin-top: 10px;
+  display: block;
+}
 main #select-box .formblock #blank {
   background-color: #ffffff;
   padding-top: 50px;

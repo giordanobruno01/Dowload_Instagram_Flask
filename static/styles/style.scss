@@ -190,6 +190,18 @@ main {
         max-width: 30vw;
         min-width: 250px;
         min-height: 30vh;
+        label {
+          display: inline-block;
+          margin: auto;
+        }
+        input{
+          display: inline-block;
+          margin: auto;
+        }
+        .submit{
+          margin-top: 10px;
+          display: block;
+        }
       }
 
       #blank {
@@ -233,7 +245,7 @@ main {
   }
 }
 footer {
- margin-top: 30px;
+  margin-top: 30px;
   display: flex;
   align-items: end;
   .footer-basic {
@@ -262,7 +274,6 @@ footer {
 
   .footer-basic .social {
     text-align: center;
-    
   }
 
   .footer-basic .social > a {
@@ -276,7 +287,6 @@ footer {
     border: 1px solid white;
     margin: 10px 8px;
     color: white;
-    
   }
 
   .footer-basic .social > a:hover {
