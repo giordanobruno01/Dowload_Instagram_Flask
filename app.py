@@ -13,7 +13,7 @@ if __name__ == "__main__":
 instaL = instaloader.Instaloader()
 def deletezip(): 
     try:
-        for i in os.listdir("."): 
+        for i in os.listdir("."):   
             if i.endswith(".zip"):
                 os.remove(i)
     except:

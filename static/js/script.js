@@ -8,7 +8,7 @@
       // Close one dropdown when selecting another
       $(".nav-dropdown").not($(this).siblings()).hide();
       e.stopPropagation();
-    });
+    }); 
     // Clicking away from dropdown will remove the dropdown class
     $("html").click(function () {
       $(".nav-dropdown").hide();
