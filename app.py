@@ -52,7 +52,7 @@ def logInsta():
                 instaL.download_videos()
                 shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
                     
-            elif(opt=="hashtag"):
+            elif(opt=="hashtag"):  
                 
                 instaL.download_hashtag(hashtag, max_count=amount)
                 shutil.make_archive(base_name=hashtag, format="zip", root_dir=str("#"+hashtag))
