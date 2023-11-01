@@ -1,14 +1,14 @@
 from flask import Flask, request, url_for, redirect, render_template, send_file, flash 
 import instaloader, shutil, os
 import datetime
-import waitress 
 
 from instaloader import *
 app = Flask(__name__)   
 app.secret_key = "hellome"  
 if __name__ == "__main__":
-    from waitress import serve
-    serve(app, host="0.0.0.0", port=8080)
+    
+    app.run(debug=False, host="0.0.0.0") 
+    #port=8080
   
 instaL = instaloader.Instaloader()
 def deletezip(): 
