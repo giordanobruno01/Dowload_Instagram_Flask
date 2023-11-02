@@ -107,11 +107,12 @@ def logInsta():
         return send_file(str(usern+".zip"),as_attachment=True)
     else: 
         return render_template("index.html")
-     
+      
 # source auth/bin/activate
 # export FLASK_APP=Unfollower_Instagram_Flask
 # FLASK_APP="app.py"
 # export FLASK_DEBUG=1 
+#gunicorn --bind 0.0.0.0:5000 app:app --daemon
   
 
  
