@@ -45,13 +45,17 @@ def logInsta():
                 instaL.download_storyitem()
             elif (opt == "profile"):
                 
-                
+                 
                 try:
                     instaL.download_profile(
                     usern, profile_pic_only=True, download_stories=True)
                 except:
+                    try:
+                        shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
+                    except:
+                        return render_template("index.html", name=str(usern + " Try inside zip creator " + opt))
                     return render_template("index.html", name=str(usern + " Try inside profile " + opt))
-                shutil.make_archive(base_name=usern, format="zip", root_dir=usern)
+                
 
             elif (opt == "reels"):
 
