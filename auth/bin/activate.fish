@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/giordanobruno/Desktop/GitHub/Unfollower_Instagram_Flask/auth"
+set -gx VIRTUAL_ENV "/Users/giordanobruno/Desktop/GitHub/Download_Instagram_Flask/auth"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

@@ -134,7 +134,7 @@ def logInsta():
 # pip3 install gunicorn
 # pip3 install requirements.txt
 # export FLASK_APP=Unfollower_Instagram_Flask
-# FLASK_APP="app.py"
+# FLASK_APP="flask_app.py"
 # export FLASK_DEBUG=1
 # gunicorn --bind 0.0.0.0:5000 app:app --daemon
 # pkill gunicorn

@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/giordanobruno/Desktop/GitHub/Unfollower_Instagram_Flask/auth"
+VIRTUAL_ENV="/Users/giordanobruno/Desktop/GitHub/Download_Instagram_Flask/auth"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
