@@ -138,3 +138,4 @@ def logInsta():
 # export FLASK_DEBUG=1
 # gunicorn --bind 0.0.0.0:5000 app:app --daemon
 # pkill gunicorn
+# python3 flask_app.py
