@@ -1,168 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="{{ url_for('static', filename= 'styles/style.css') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename= 'styles/style.css') }}"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
 
     <title>Download from Instagram</title>
+  </head>
 
-</head>
-
-<body class="">
+  <body class="">
     <header>
-        <section class="navigation">
-            <div class="nav-container">
-                <div class="brand">
-                    <a href="#!">Logo</a>
-                </div>
-                <nav>
-                    <div class="nav-mobile">
-                        <a id="nav-toggle" href="#!">
-                            <span></span>
-                        </a>
-                    </div>
-                    <ul class="nav-list">
-                        <li>
-                            <a href="#main">Home</a>
-                        </li>
-                        <li>
-                            <a href="">About</a>
-                        </li>
-
-                        <li>
-                            <a href="https://unfollowingback.com/" target="_blank">Unfollowers</a>
-                        </li>
-
-                        <li>
-                            <a href="mailto:giordanobrunotj@hotmail.com" target="_blank">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
+      <section class="navigation">
+        <div class="nav-container">
+          <div class="brand">
+            <a href="#!">Logo</a>
+          </div>
+          <nav>
+            <div class="nav-mobile">
+              <a id="nav-toggle" href="#!">
+                <span></span>
+              </a>
             </div>
-        </section>
+            <ul class="nav-list">
+              <li>
+                <a href="#main">Home</a>
+              </li>
+              <li>
+                <a href="">About</a>
+              </li>
 
+              <li>
+                <a href="https://unfollowingback.com/" target="_blank"
+                  >Unfollowers</a
+                >
+              </li>
+
+              <li>
+                <a href="mailto:giordanobrunotj@hotmail.com" target="_blank"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
     </header>
     <main class="nav-container">
-        <div id="select-box">
-            <div id="instructions">
-                <h2>Instructions</h2>
-                <li type="none">
-                    <ul>Select what you wish to download</ul>
-                    <ul>A box will pop up </ul>
-                    <ul>Fill the details</ul>
-                    <ul>Click Download</ul>
-                    <ul>Enjoy</ul>
-                </li>
-
-            </div>
-            <form action="" method="post" class="row formblock">
-
-                <h4>Select an option to download</h4>
-                <!-- <input type="password" name="password" placeholder="password"> -->
-                <select name="opt" id="hash" class="col-xm-12">
-                    <option value="blank">Select an option</option>
-                    <option value="profile">Profile Image</option>
-                    <option value="stories">Stories</option>
-                    <option value="reels">Reels</option>
-                    <option value="hashtag">Hashtag Related Images</option>
-                    <option value="highlights">Highlights</option>
-                    <option value="post">Posts</option>
-                    <option value="pictures">Pictures</option>
-                    <option value="igtv">IGTV</option>
-                    <option value="test">Test</option>
-                </select>
-                <div id="blank">
-                </div>
-                <div id="profile">
-                    <label for="username">Select the Username</label>
-                    <input type="text" name="username" placeholder="username">
-                    <input type="submit" value="Download" class="submit">
-
-                </div>
-                <div id="stories">
-                    <label for="username">Select the Username</label>
-                    <input type="text" name="username" placeholder="username">
-                    <input type="submit" value="Download" class="submit">
-                </div>
-                <div id="reels">
-                    <label for="username">Select the Username</label>
-                    <input type="text" name="username" placeholder="username">
-                    <input type="submit" value="Download" class="submit">
-                </div>
-                <div id="hashtag">
-                    <label for="username">Select the Username</label>
-                    <input type="text" name="username" placeholder="username">
-                    <input type="text" id="extra" name="extra" placeholder="hashtag">
-                    <input type="date" name="startdate" id="startdate">
-                    <input type="date" name="enddate" id="enddate">
-                    <input type="submit" value="Download" class="submit">
-                </div>  
-                <div id="highlights"> 
-                    <label for="username">Select the Username</label>
-                    <input type="text" name="username" placeholder="username">
-                    <input type="submit" value="Download" class="submit">
-                </div> 
-                <div id="post">
-                    <label for="username">Select the Username</label>
-                    <input type="text" name="username" placeholder="username">
-
-                    <input type="text" id="amount" name="amount" placeholder="how many post?" class="col-xs-12">
-                    <input type="submit" value="Download" class="submit">
-                </div>
-                <div id="pictures">
-                    <label for="username">Select the Username</label>
-                    <input type="text" name="username" placeholder="username">
-                    <input type="submit" value="Download" class="submit">
-                </div>
-                <div id="igtv">
-                    <label for="username">Select the Username</label>
-                    <input type="text" name="username" placeholder="username">
-                    <input type="submit" value="Download" class="submit">
-                </div>
-                <div id="test">
-                    <label for="username">Select the Username</label>
-                    <input type="text" name="username" placeholder="username">
-                    <input type="submit" value="Download" class="submit">
-                </div> {{name}}
-
-            </form>
-
-
-
+      <div id="select-box">
+        <div id="instructions">
+          <h2>Instructions</h2>
+          <li type="none">
+            <ul>
+              Select what you wish to download
+            </ul>
+            <ul>
+              A box will pop up
+            </ul>
+            <ul>
+              Fill the details
+            </ul>
+            <ul>
+              Click Download
+            </ul>
+            <ul>
+              Enjoy
+            </ul>
+          </li>
         </div>
+        <form method="post" class="row formblock">
+          <h4>Select an option to download</h4>
+          <!-- <input type="password" name="password" placeholder="password"> -->
+          <select name="opt" id="hash" class="col-xm-12">
+            <option value="blank">Select an option</option>
+            <option value="profile">Profile Image</option>
+            <option value="stories">Stories</option>
+            <option value="reels">Reels</option>
+            <option value="hashtag">Hashtag Related Images</option>
+            <option value="highlights">Highlights</option>
+            <option value="post">Posts</option>
+            <option value="pictures">Pictures</option>
+            <option value="igtv">IGTV</option>
+            <option value="test">Test</option>
+          </select>
+          <div id="blank"></div>
+          <div id="profile">
+            <label for="username">Select the Username</label>
+            <input type="text" name="username" placeholder="username" />
+            <input type="submit" value="Download" class="submit" />
+          </div>
+          <div id="stories">
+            <label for="username">Select the Username</label>
+            <input type="text" name="username" placeholder="username" />
+            <input type="submit" value="Download" class="submit" />
+          </div>
+          <div id="reels">
+            <label for="username">Select the Username</label>
+            <input type="text" name="username" placeholder="username" />
+            <input type="submit" value="Download" class="submit" />
+          </div>
+          <div id="hashtag">
+            <label for="username">Select the Username</label>
+            <input type="text" name="username" placeholder="username" />
+            <input type="text" id="extra" name="extra" placeholder="hashtag" />
+            <input type="date" name="startdate" id="startdate" />
+            <input type="date" name="enddate" id="enddate" />
+            <input type="submit" value="Download" class="submit" />
+          </div>
+          <div id="highlights">
+            <label for="username">Select the Username</label>
+            <input type="text" name="username" placeholder="username" />
+            <input type="submit" value="Download" class="submit" />
+          </div>
+          <div id="post">
+            <label for="username">Select the Username</label>
+            <input type="text" name="username" placeholder="username" />
+
+            <input
+              type="text"
+              id="amount"
+              name="amount"
+              placeholder="how many post?"
+              class="col-xs-12"
+            />
+            <input type="submit" value="Download" class="submit" />
+          </div>
+          <div id="pictures">
+            <label for="username">Select the Username</label>
+            <input type="text" name="username" placeholder="username" />
+            <input type="submit" value="Download" class="submit" />
+          </div>
+          <div id="igtv">
+            <label for="username">Select the Username</label>
+            <input type="text" name="username" placeholder="username" />
+            <input type="submit" value="Download" class="submit" />
+          </div>
+          <div id="test">
+            <label for="username">Select the Username</label>
+            <input type="text" name="username" placeholder="username" />
+            <input type="submit" value="Download" class="submit" />
+          </div>
+          {{name}}
+        </form>
+      </div>
     </main>
     <footer>
-        <div class="footer-basic">
-            <footer>
-                <div class="social">
-                    <a href="#"><i class="icon ion-social-instagram"></i></a>
-                    <a href="#"><i class="icon ion-social-youtube"></i></a>
-                    <a href="#"><i class="icon ion-social-facebook"></i></a>
-                    <a href="#"><i class="icon ion-social-snapchat"></i></a>
-                </div>
-                <!-- <ul class="list-inline">
+      <div class="footer-basic">
+        <footer>
+          <div class="social">
+            <a href="#"><i class="icon ion-social-instagram"></i></a>
+            <a href="#"><i class="icon ion-social-youtube"></i></a>
+            <a href="#"><i class="icon ion-social-facebook"></i></a>
+            <a href="#"><i class="icon ion-social-snapchat"></i></a>
+          </div>
+          <!-- <ul class="list-inline">
                     <li class="list-inline-item"><a href="#">Home</a></li>
                     <li class="list-inline-item"><a href="#">Services</a></li>
                     <li class="list-inline-item"><a href="#">About</a></li>
                     <li class="list-inline-item"><a href="#">Terms</a></li>
                    
                 </ul> -->
-                <p class="copyright">Giordano Bruno © 2023</p>
-            </footer>
-        </div>
-
+          <p class="copyright">Giordano Bruno © 2023</p>
+        </footer>
+      </div>
     </footer>
 
     <script src="{{url_for('static', filename='js/script.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-</body>
-
+  </body>
 </html>
